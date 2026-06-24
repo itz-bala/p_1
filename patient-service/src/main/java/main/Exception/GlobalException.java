@@ -28,23 +28,20 @@ public class GlobalException {
 		
 		
 	}
-	
-	@ExceptionHandler(EmailNotFoundException.class)
-	
-	public ResponseEntity<String>email_not_found(EmailNotFoundException ex){
 		
-		
-		
-		return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
-		
-	}
-	
 	
 	@ExceptionHandler(EmailExistsException.class)
 	public ResponseEntity<String>email_exists(EmailExistsException ex){
 		
 		
 		return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
+	}
+	
+	
+	@ExceptionHandler(PatientNotFoundException.class)
+	public ResponseEntity<String>not_found(PatientNotFoundException ex){
+		
+		return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
 	}
 		
 		
