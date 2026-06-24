@@ -1,0 +1,13 @@
+.metadata/
+target/
+.idea/
+.settings/
+.project
+.classpath
+*.log
+
+.mvn/wrapper/maven-wrapper.jar
+
+**/target/
+**/.idea/
+**/.settings/
