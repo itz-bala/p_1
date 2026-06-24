@@ -9,5 +9,9 @@ import main.Entity.Patient;
 public interface PatientRepository extends JpaRepository<Patient,Integer>{
 	
 	Optional<Patient>findById(Integer id);
+	
+	boolean existsByEmail(String email);
+	
+	
 
 }
